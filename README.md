@@ -1,7 +1,7 @@
 ## Info
 This webapp will get status from a JS Library on an example website and will control the user information on which pages he visited and his email if the user wants to contact.
 
-## Usage
+## Install
 
 First you need to clone this repository to your machine
 
@@ -19,6 +19,12 @@ rake db:migrate
 ```
 rails s
 ```
+
+## Usage
+
+You will need a website example with the JS that access the website to register the information of the user and which pages he/she visited
+
+To get the information you just need to point to the root of the domain it's running and a list of the data will appear
 
 ## Credit
 
