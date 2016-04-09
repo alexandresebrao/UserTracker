@@ -1,0 +1,17 @@
+<% @user.each do |user| %>
+    <br>
+    <br> User: <% if user.email %> <%= user.email %>  <% else %> <%= user.userid %> <%end%>
+    <br>
+    <table class="table">
+      <tr>
+        <td>Pagina</td>
+        <td>Visitado</td>
+      </tr>
+      <% user.pages.order('created_at DESC' ).each do |page| %>
+      <tr>
+        <td><%= page.page %></td>
+        <td><%= page.created_at %></td>
+      </tr>
+      <% end %>
+    </table>
+<% end %>

@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  root 'register#show'
   # You can have the root of your site routed with "root"
   get '/control/:userid/:page' => 'register#create', as: 'usercontrol'
-  patch '/update/:userid' => 'register#update', as: 'userupdate'
+  post '/control/update/:userid' => 'register#update', as: 'userupdate'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

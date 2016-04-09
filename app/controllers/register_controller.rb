@@ -21,6 +21,9 @@ class RegisterController < ApplicationController
    headers['Access-Control-Max-Age'] = '1728000'
   end
 
+  def show
+    @user = User.all
+  end
   # Here we will create our visitor
   def create
     @user = User.find_or_create_by(userid: params[:userid])
