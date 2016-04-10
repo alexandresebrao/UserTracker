@@ -18,23 +18,14 @@ describe RegisterController, :type => :controller  do
     end
   end
 
-  describe "GET #show" do
-    it "has to be a success cause it's the list of users" do
-      get :show
-      expect(response).to be_success
-    end
-  end
 
-  describe "POST #show" do
+  describe "POST #update" do
     it "has to be a success cause it's the list of users" do
       user = FactoryGirl.create(:user)
-
       post :update, userid: user.userid, email: "teste@teste1.gmail"
       user_update = User.find(user)
       expect(user_update.email).to eq("teste@teste1.gmail")
     end
   end
-
-
  end
 end
